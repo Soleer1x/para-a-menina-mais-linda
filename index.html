@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Para Emilyn ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            /* evita ajuste automático de texto no iOS */
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffedf5, #ffe7ff, #fff5fb);
+            overflow-x: hidden;
+            color: #444;
+            /* evita quebra de palavras no meio */
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+        }
+
+        /* Fundo animado com bolinhas */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, #ffffff66 2px, transparent 2px);
+            background-size: 40px 40px;
+            animation: move 30s linear infinite;
+            opacity: .3;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-200px);
+            }
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 90px;
+            color: #ff4d88;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        .hero h2 {
+            margin-top: 15px;
+            font-size: 35px;
+            font-weight: 600;
+            color: #555;
+            line-height: 1.3;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        .hero p {
+            margin: 25px auto;
+            max-width: 700px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #666;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ff4d88;
+            color: #fff;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: .4s;
+            box-shadow: 0 15px 35px rgba(255, 77, 136, .3);
+            word-break: normal;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Grid cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+            transition: .4s;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #ff4d88;
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Carta */
+        .letter {
+            background: white;
+            border-radius: 30px;
+            padding: 60px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .08);
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        .letter h2 {
+            text-align: center;
+            color: #ff4d88;
+            margin-bottom: 40px;
+            font-size: 40px;
+            font-weight: 700;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        .letter p {
+            line-height: 2;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: justify;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        .letter p.signature {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4d88;
+            margin-top: 35px;
+            word-break: normal;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 55px;
+            color: #ff4d88;
+            line-height: 1.2;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+        }
+
+        footer p {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #666;
+            word-break: normal;
+            overflow-wrap: break-word;
+            hyphens: none;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Corações flutuantes */
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            color: #ff4d88;
+            animation: heartFloat 8s linear infinite;
+            opacity: .5;
+            pointer-events: none;
+            z-index: 0;
+            font-size: 20px;
+            will-change: transform, opacity;
+        }
+
+        @keyframes heartFloat {
+            from {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+            to {
+                transform: translateY(-120vh) scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* ========== RESPONSIVIDADE ========== */
+        @media screen and (max-width: 768px) {
+
+            section {
+                padding: 40px 16px;
+                min-height: auto;
+                /* permite scroll natural no mobile */;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+                margin-top: 10px;
+            }
+
+            .hero p {
+                font-size: 17px;
+                line-height: 1.7;
+                margin: 20px auto;
+                padding: 0 5px;
+            }
+
+            .btn {
+                padding: 16px 32px;
+                font-size: 16px;
+                white-space: normal;
+                /* permite quebra se necessário em telas muito pequenas */;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .card h3 {
+                font-size: 20px;
+            }
+
+            .card p {
+                font-size: 15px;
+            }
+
+            .letter {
+                padding: 30px 20px;
+                border-radius: 25px;
+            }
+
+            .letter h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .letter p {
+                font-size: 17px;
+                line-height: 1.9;
+                text-align: left;
+                /* em mobile, texto justificado pode abrir buracos, left fica melhor */
+                margin-bottom: 18px;
+            }
+
+            .letter p.signature {
+                font-size: 24px;
+            }
+
+            footer h2 {
+                font-size: 42px;
+            }
+
+            footer p {
+                font-size: 17px;
+                padding: 0 10px;
+            }
+
+            /* corações menores e mais lentos para desempenho */
+            .heart {
+                font-size: 16px;
+                animation-duration: 10s;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .letter {
+                padding: 25px 16px;
+            }
+
+            .letter h2 {
+                font-size: 26px;
+            }
+
+            .letter p {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            .letter p.signature {
+                font-size: 22px;
+            }
+
+            footer h2 {
+                font-size: 36px;
+            }
+
+            footer p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção Hero -->
+    <section>
+        <div class="container hero">
+            <h1>Para Emilyn ❤️</h1>
+            <h2>A garota mais linda, perfeita e maravilhosa desse mundo.</h2>
+            <p>
+                Se você está lendo isso, é porque eu queria te lembrar de uma coisa muito importante...
+                Você nunca vai enfrentar nada sozinha. Enquanto eu existir, vou estar ao seu lado.
+            </p>
+            <a href="#mensagem" class="btn">Leia meu coração ❤️</a>
+        </div>
+    </section>
+
+    <!-- Cards de carinho -->
+    <section>
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>🌸 Você é especial</h3>
+                    <p>
+                        Você ilumina meus dias de um jeito que nem imagina. Seu sorriso é capaz de mudar completamente meu mundo.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>❤️ Nunca duvide</h3>
+                    <p>
+                        Nunca duvide do quanto você é importante para mim. Você merece todo carinho, toda felicidade e todo amor existente.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🤍 Você não está sozinha</h3>
+                    <p>
+                        Nos dias felizes eu vou comemorar com você. Nos dias difíceis eu vou segurar sua mão até tudo passar.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🥹 Meu maior presente</h3>
+                    <p>
+                        Ter você na minha vida é uma das melhores coisas que já aconteceu comigo. E eu agradeço todos os dias por isso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carta completa e estendida -->
+    <section id="mensagem">
+        <div class="container">
+            <div class="letter">
+                <h2>Uma carta para você 💌</h2>
+
+                <p>
+                    Meu amor...
+                </p>
+
+                <p>
+                    Ontem foi um dia difícil, eu sei. E talvez hoje seu coração ainda esteja um pouco machucado. Mas eu queria que esse pequeno site fosse um abraço, daqueles bem apertados, que aquecem a alma e fazem o mundo parar por um instante.
+                </p>
+
+                <p>
+                    Quero que você saiba que não importa o que aconteça, você nunca vai precisar enfrentar tudo sozinha. Eu vou estar do seu lado nos dias bons, nos dias ruins e principalmente quando você achar que não consegue mais. Vou ser a sua calma quando o mundo parecer barulhento demais, e o seu porto seguro quando tudo estiver desabando.
+                </p>
+
+                <p>
+                    Você é muito mais forte do que imagina. Você é linda, perfeita, maravilhosa e dona do sorriso mais bonito que eu já vi. Mesmo nos dias em que você duvidar disso, eu estarei aqui para repetir quantas vezes forem necessárias: você é incrível, você é suficiente, você é um milagre caminhando sobre a Terra.
+                </p>
+
+                <p>
+                    Não deixe que um dia ruim faça você esquecer quem você é. Você merece ser feliz. Merece sorrir até a barriga doer. Merece ser amada todos os dias, sem medidas e sem pressa. Merece receber o melhor que a vida pode oferecer, porque você transborda bondade, luz e amor por onde passa.
+                </p>
+
+                <p>
+                    E eu prometo fazer o possível para lembrar você disso sempre. Todos os dias, se for preciso. Porque às vezes a gente se perde, se esquece da própria força, e ter alguém que nos faça lembrar é um presente raro. Eu quero ser essa pessoa para você.
+                </p>
+
+                <p>
+                    Quero cuidar de você nos mínimos detalhes: preparar um chá quando você estiver cansada, te ouvir por horas sem pressa nenhuma, te apoiar nos seus sonhos mais malucos, comemorar cada vitória sua como se fosse minha, e segurar sua mão com toda a firmeza do mundo quando as coisas parecerem difíceis demais.
+                </p>
+
+                <p>
+                    Você nunca será um peso para mim. Muito pelo contrário... você é um presente que Deus colocou na minha vida, um pedacinho de céu que eu tenho a sorte de poder abraçar. Cada momento ao seu lado é uma bênção, e eu não trocaria isso por nada nesse universo.
+                </p>
+
+                <p>
+                    Se um dia você se sentir frágil, lembre-se de que até as flores mais bonitas precisam de chuva para florescer. Os dias cinzentos não definem quem você é; eles apenas preparam o terreno para um arco-íris ainda mais colorido. E eu estarei com você debaixo da chuva, com um guarda-chuva ou simplesmente dançando na tempestade, até o sol aparecer de novo.
+                </p>
+
+                <p>
+                    Às vezes a ansiedade grita e o medo tenta nos convencer de que não somos capazes. Mas eu quero ser a voz mais alta dentro de você, sussurrando que você consegue, que você é amada, que você é muito mais do que qualquer pensamento ruim possa dizer. Confia em mim: você é gigante.
+                </p>
+
+                <p>
+                    E tem uma coisa que você já sabe, mas eu nunca vou me cansar de repetir...
+                </p>
+
+                <p class="signature">
+                    Eu sou o seu Mucilon. ❤️🥹
+                </p>
+
+                <p>
+                    Então quando sentir medo, tristeza ou insegurança... lembra de mim. Lembra que existe alguém que acredita em você mais do que qualquer pessoa nesse mundo. Alguém que vê em você uma potência, uma luz rara, uma alma preciosa que merece ser protegida e celebrada todos os dias.
+                </p>
+
+                <p>
+                    Porque eu acredito. Com cada pedacinho do meu coração.
+                </p>
+
+                <p>
+                    Eu acredito na mulher incrível que você é. Acredito na sua força quando você mesma esquece que a tem. Acredito no seu futuro brilhante, nos seus sonhos que ainda vão se realizar, na sua capacidade imensa de transformar dor em aprendizado e lágrimas em crescimento.
+                </p>
+
+                <p>
+                    E vou continuar aqui.<br>
+                    Hoje.<br>
+                    Amanhã.<br>
+                    Semana que vem.<br>
+                    Mês que vem.<br>
+                    Ano que vem.<br>
+                    Em todas as estações.<br>
+                    Em todas as versões de nós dois.<br>
+                    Sempre.
+                </p>
+
+                <p class="signature">
+                    Eu te amo, Emilyn Fröhlich. ❤️
+                </p>
+
+                <p style="text-align:center; font-size:18px; color:#888; margin-top:30px;">
+                    (Guarde este cantinho. Ele será eternamente seu refúgio.)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Para sempre nós. ❤️</h2>
+        <p>
+            Se algum dia você esquecer o quanto é amada... volte aqui. Isso sempre vai existir para te lembrar disso.
+        </p>
+    </footer>
+
+    <!-- Corações flutuantes (animação leve) -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+
+            // posição horizontal aleatória
+            heart.style.left = Math.random() * 100 + "vw";
+
+            // tamanho variado
+            const size = 15 + Math.random() * 30;
+            heart.style.fontSize = size + "px";
+
+            // duração variada
+            const duration = 5 + Math.random() * 5;
+            heart.style.animationDuration = duration + "s";
+
+            document.body.appendChild(heart);
+
+            // remove após a animação terminar para não acumular elementos
+            setTimeout(() => {
+                if (heart && heart.parentNode) {
+                    heart.remove();
+                }
+            }, duration * 1000 + 500);
+        }
+
+        // Cria corações em intervalos (reduzido para desempenho mobile)
+        const isMobile = window.innerWidth < 768;
+        const intervalTime = isMobile ? 500 : 300;
+        setInterval(createHeart, intervalTime);
+
+        // Ajusta intervalo se redimensionar a tela
+        window.addEventListener('resize', () => {
+            clearInterval();
+            const mobileNow = window.innerWidth < 768;
+            const newInterval = mobileNow ? 500 : 300;
+            setInterval(createHeart, newInterval);
+        });
+    </script>
+</body>
+</html>
