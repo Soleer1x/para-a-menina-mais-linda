@@ -258,7 +258,7 @@
                 opacity: 0.6;
             }
             to {
-                transform: translateY(-120vh) scale(2.5);
+                transform: translateY(-110vh) scale(1.5);
                 opacity: 0;
             }
         }
@@ -555,8 +555,8 @@
 
         // Cria corações em intervalos (reduzido para desempenho mobile)
         const isMobile = window.innerWidth < 768;
-        const intervalTime = isMobile ? 500 : 300;
-        setInterval(createHeart, intervalTime);
+        const intervalTime = isMobile ? 1800 : 1200;
+setInterval(createHeart, intervalTime);
 
         // Ajusta intervalo se redimensionar a tela
         window.addEventListener('resize', () => {
